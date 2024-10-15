@@ -43,10 +43,9 @@ ul.addEventListener("click", (event) => {
             ToDoList.splice(index, 1); 
             localStorage.setItem('ToDoList', JSON.stringify(ToDoList));
     }
-    renderList();
+    addToList(addToList);
     }
 
-    renderList();
     if(event.target.classList.contains("checkbox")) {
         if(event.target.checked) {
             event.target.closest(".todo-item").classList.add("todo-item--checked");
